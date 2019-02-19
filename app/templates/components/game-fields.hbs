@@ -1,0 +1,57 @@
+
+<div class="game-field-group">
+	<label>Blokus Version:</label>
+
+	<div class="game-field">
+		<input type="radio" name="blokusType" id="blokusReg" value="Normal">
+		<label for="blokusReg">Regular</label>
+	</div>
+
+	<div class="game-field">
+		<input type="radio" name="blokusType" id="blokusDuo" value="Duo">
+		<label for="blokusDuo">Duo</label>
+	</div>
+
+</div>
+
+<div class="game-field">
+	<label for="gameDate">Date Game Played:</label>
+	<input type="date" id="gameDate" value="{{todaysDate}}">
+</div>
+
+<div class="game-field-group">
+	<!--if blokus duo show 2 fields-->
+	{{!-- {{first player duo}}
+	{{second player duo}} --}}
+
+	<!--otherwise blokus reg-->
+	<div class="game-field">
+		<label for="firstPlayer">First Player:</label>
+		<input type="text" name="playerOrder" id="firstPlayer">
+		<input type="checkbox" name="winner">Winner?
+	</div>
+
+	<div class="game-field">
+		<label for="secondPlayer">Second Player:</label>
+		<input type="text" name="playerOrder" id="secondPlayer">
+		<input type="checkbox" name="winner">Winner?
+	</div>
+
+	<div class="game-field">
+		<label for="thirdPlayer">Third Player:</label>
+		<input type="text" name="playerOrder" id="thirdPlayer">
+		<input type="checkbox" name="winner">Winner?
+
+	</div>
+
+	<div class="game-field">
+		<label for="fourthPlayer">Fourth Player:</label>
+		<input type="text" name="playerOrder" id="fourthPlayer">
+		<input type="checkbox" name="winner">Winner?
+
+	</div>
+
+</div>
+
+
+{{yield}}
